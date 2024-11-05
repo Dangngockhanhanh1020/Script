@@ -1,13 +1,13 @@
-local NormalWalkSpeed = 16
+local NormalWalkSpeed = 12
 repeat task.wait() until game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 13 or 8.5
-NormalWalkSpeed = 19
+NormalWalkSpeed = 12
 if workspace:FindFirstChild("SeekMovingNewClone") then
-NormalWalkSpeed = 20.5
+NormalWalkSpeed = 21
 return
 end
-local SprintSpeed = 19
+local SprintSpeed = 18
 repeat task.wait() until game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 13 or 8.5
-SprintSpeed = 19
+SprintSpeed = 18
 if workspace:FindFirstChild("SeekMovingNewClone") then
 SprintSpeed = 21
 return
@@ -50,12 +50,12 @@ end)
 local function handleContext(name, state, input)
 	if state == Enum.UserInputState.Begin then
 		if CameraEffect == true then
-			TweenService:Create(Camera, TweenInfo.new(0.5), {FieldOfView = 70}):Play()
+			TweenService:Create(Camera, TweenInfo.new(0.5), {FieldOfView = 71}):Play()
 		end
 		Humanoid.WalkSpeed = SprintSpeed
 	else
 		if CameraEffect == true then
-			TweenService:Create(Camera, TweenInfo.new(0.5), {FieldOfView = 70}):Play()
+			TweenService:Create(Camera, TweenInfo.new(0.5), {FieldOfView = 69}):Play()
 		end
 		Humanoid.WalkSpeed = NormalWalkSpeed
 	end
